@@ -4,7 +4,7 @@ import { init } from '../scripts/gitOperate.js';
 export class AppService {
   getHello(id): string {
     const res = init(id);
-    console.log(res);
+    // console.log(res);
     return 'Hello World!haiai';
   }
 }
