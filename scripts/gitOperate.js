@@ -2,7 +2,7 @@
 const path = require('path');
 const fs = require('fs');
 const mkdirp = require('mkdirp');
-import simpleGit, { SimpleGit, SimpleGitOptions } from 'simple-git';
+const simpleGit = require('simple-git');
 const options = {
   baseDir: process.cwd(),
   binary: 'git',
