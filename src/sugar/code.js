@@ -1,1 +1,1 @@
-console.log(www123)
+console.log(pp is name)
