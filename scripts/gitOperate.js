@@ -2,7 +2,13 @@
 const path = require('path');
 const fs = require('fs');
 const mkdirp = require('mkdirp');
-const git = require('simple-git/promise');
+import simpleGit, { SimpleGit, SimpleGitOptions } from 'simple-git';
+const options = {
+  baseDir: process.cwd(),
+  binary: 'git',
+  maxConcurrentProcesses: 6,
+};
+const git = simpleGit(options);
 const resolve = (dir) => path.resolve(__dirname, dir);
 const getDirName = path.dirname;
 //创建带有文件夹的文件
@@ -26,11 +32,9 @@ function init() {
 }
 
 async function handleGit() {
-  const GIT_REPOSITORY_ROOT = process.cwd();
-  simpleGit = git(GIT_REPOSITORY_ROOT);
-  await simpleGit.add('.');
-  await simpleGit.commit('first commit!');
-  await simpleGit.push('origin', 'master');
+  await git.add('.');
+  await git.commit('first commit!');
+  await git.push('origin', 'master');
   console.log('提交成功');
 }
 module.exports = {
