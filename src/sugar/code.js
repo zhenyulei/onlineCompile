@@ -1,1 +1,1 @@
-console.log("dasdas多少啊")
+console.log(09876)
