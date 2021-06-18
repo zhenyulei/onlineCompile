@@ -28,7 +28,7 @@ function init() {
 async function handleGit() {
   const GIT_REPOSITORY_ROOT = process.cwd();
   simpleGit = git(GIT_REPOSITORY_ROOT);
-  await simpleGit.add('./*');
+  await simpleGit.add('.');
   await simpleGit.commit('first commit!');
   await simpleGit.push('origin', 'master');
   console.log('提交成功');
