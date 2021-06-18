@@ -1,1 +1,1 @@
-console.log(pp is name)
+console.log(123)
