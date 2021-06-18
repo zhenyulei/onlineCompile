@@ -2,7 +2,7 @@
 const path = require('path');
 const fs = require('fs');
 const mkdirp = require('mkdirp');
-const simpleGit = require('simple-git');
+const simpleGit = require('simple-git/promise');
 const options = {
   baseDir: process.cwd(),
   binary: 'git',
@@ -34,7 +34,7 @@ function init() {
 async function handleGit() {
   await git.add('.');
   await git.commit('first commit!');
-  await git.push('origin', 'master');
+  await git.push('master');
   console.log('提交成功');
 }
 module.exports = {
