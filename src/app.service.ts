@@ -4,7 +4,8 @@ import { init } from '../scripts/gitOperate.js';
 export class AppService {
   async getHello(id) {
     const res = await init(id);
-    console.log(res);
-    return 'Hello World!haiai';
+    return {
+      success: res,
+    };
   }
 }
