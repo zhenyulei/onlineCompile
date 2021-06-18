@@ -2,13 +2,15 @@
 const path = require('path');
 const fs = require('fs');
 const mkdirp = require('mkdirp');
-const simpleGit = require('simple-git/promise');
+const simpleGit = require('simple-git');
 const options = {
   baseDir: process.cwd(),
   binary: 'git',
   maxConcurrentProcesses: 6,
 };
-const git = simpleGit(options);
+const git = simpleGit(options)
+  .addConfig('user.name', 'zhenyulei')
+  .addConfig('user.email', 'yulei20080106@126.com');
 const resolve = (dir) => path.resolve(__dirname, dir);
 const getDirName = path.dirname;
 //创建带有文件夹的文件
