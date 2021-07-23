@@ -24,10 +24,7 @@ function createViews(viewName, ViewContent) {
 export class AppService {
   async getHello(id) {
     const res = await init(id);
-    const content = path.resolve(
-      __dirname,
-      '../../online-client/src/components/Welcome/Welcome.tsx',
-    );
+    const content = path.resolve(__dirname, '../../');
     console.log(content);
     //     const pageContent = `import * as React from "react";
 
