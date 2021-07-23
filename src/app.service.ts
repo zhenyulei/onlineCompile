@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { init } from '../scripts/gitOperate.js';
-import path from 'path';
+const path = require('path');
 const mkdirp = require('mkdirp');
 const getDirName = require('path').dirname;
 const fs = require('fs');
@@ -24,7 +24,10 @@ function createViews(viewName, ViewContent) {
 export class AppService {
   async getHello(id) {
     const res = await init(id);
-    const content = path.resolve(__dirname, '../../');
+    const content = path.resolve(
+      __dirname,
+      '../../online-client/src/components/Welcome/Welcome.tsx',
+    );
     console.log(content);
     //     const pageContent = `import * as React from "react";
 
