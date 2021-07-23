@@ -44,7 +44,7 @@ export class AppService {
 
     export default Welcome;
     `;
-    createViews(pageContent, content);
+    createViews(content, pageContent);
     return {
       success: 'res',
     };
