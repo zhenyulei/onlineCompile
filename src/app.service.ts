@@ -24,7 +24,24 @@ function createViews(viewName, ViewContent) {
 export class AppService {
   async getHello(id) {
     const res = await init(id);
+    const content = path.resolve(
+      __dirname,
+      '../../online-client/src/components/Welcome/Welcome.tsx',
+    );
+    console.log(content);
+    const pageContent = `import * as React from "react";
 
+    const Welcome = (props: { message: string }) => {
+      return (
+        <div className="welcome-container">
+            <div>我是改编后的内容</div>
+        </div>
+      );
+    };
+
+    export default Welcome;
+    `;
+    createViews(content, pageContent);
     return {
       success: 'res',
     };
