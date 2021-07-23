@@ -11,6 +11,6 @@ async function bootstrap() {
       extensions: ['html', 'jpg', 'jpeg', 'png', 'gif'],
     }),
   );
-  await app.listen(3000);
+  await app.listen(3001);
 }
 bootstrap();

@@ -5,7 +5,7 @@ export class AppService {
   async getHello(id) {
     const res = await init(id);
     return {
-      success: res,
+      success: 'res',
     };
   }
 }
