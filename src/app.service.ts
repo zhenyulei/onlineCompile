@@ -4,7 +4,6 @@ import path from 'path';
 const mkdirp = require('mkdirp');
 const getDirName = require('path').dirname;
 const fs = require('fs');
-const resolve = (dir) => path.resolve(__dirname, dir);
 
 //创建带有文件夹的文件
 function writeFile(path, contents, cb) {
