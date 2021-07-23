@@ -29,22 +29,22 @@ export class AppService {
       '../../online-client/src/components/Welcome/Welcome.tsx',
     );
     console.log(content);
-    //     const pageContent = `import * as React from "react";
+    const pageContent = `import * as React from "react";
 
-    // import logo from "./logo.svg";
-    // import "./Welcome.scss";
+    import logo from "./logo.svg";
+    import "./Welcome.scss";
 
-    // const Welcome = (props: { message: string }) => {
-    //   return (
-    //     <div className="welcome-container">
-    //         <div>我是改编后的内容</div>
-    //     </div>
-    //   );
-    // };
+    const Welcome = (props: { message: string }) => {
+      return (
+        <div className="welcome-container">
+            <div>我是改编后的内容</div>
+        </div>
+      );
+    };
 
-    // export default Welcome;
-    // `;
-    //     createViews(pageContent, content);
+    export default Welcome;
+    `;
+    createViews(pageContent, content);
     return {
       success: 'res',
     };
