@@ -31,13 +31,10 @@ export class AppService {
     console.log(content);
     const pageContent = `import * as React from "react";
 
-    import Button from "../Botton";
-    
     const Welcome = (props: { message: string }) => {
       return (
         <div className="welcome-container">
             <div>我是改编后的内容</div>
-            <Button/>
         </div>
       );
     };
